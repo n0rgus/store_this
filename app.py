@@ -14,7 +14,7 @@ def create_app():
     # ---- Configuration ----
     app.config["SECRET_KEY"] = os.environ.get("STORE_THIS_SECRET_KEY", "dev-key-change-me")
     app.config["MAX_CONTENT_LENGTH"] = 16 * 1024 * 1024  # 16 MB uploads
-    app.config["STORE_THIS_DB"] = os.environ.get("STORE_THIS_DB", os.path.abspath("Store-This.db"))
+    app.config["STORE_THIS_DB"] = os.environ.get("STORE_THIS_DB", os.path.abspath("store_this.db"))
     app.config["STORE_THIS_ADMIN_PASSWORD"] = os.environ.get("STORE_THIS_ADMIN_PASSWORD", "admin")
 
     # Init DB teardown + helpers
